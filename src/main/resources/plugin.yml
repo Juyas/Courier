@@ -1,0 +1,5 @@
+main: de.juyas.courier.CourierPlugin
+name: Courier
+version: '${project.version}'
+author: Juyas
+api-version: '1.21'
