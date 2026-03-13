@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.betonquest</groupId>
+    <artifactId>parent</artifactId>
+    <version>2.7.0</version>
+  </parent>
+
+  <groupId>de.juyas</groupId>
+  <artifactId>courier</artifactId>
+  <version>${revision}${changelist}</version>
+  <description>A minecraft plugin to create letters in maps and deliver them to players</description>
+
+  <name>Courier</name>
+
+  <properties>
+    <revision>1.0.0</revision>
+    <changelist>-SNAPSHOT</changelist>
+    <java.version>21</java.version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+    <betonquest-api.version>3.0.0-SNAPSHOT</betonquest-api.version>
+    <worldguard-bukkit.version>7.0.9</worldguard-bukkit.version>
+    <worldguard-core.version>7.0.9</worldguard-core.version>
+    <worldedit-bukkit.version>7.3.0</worldedit-bukkit.version>
+    <worldedit-core.version>7.3.0</worldedit-core.version>
+    <citizens-main.version>2.0.37-SNAPSHOT</citizens-main.version>
+    <shopkeepers-api.version>2.22.3</shopkeepers-api.version>
+  </properties>
+
+  <repositories>
+    <repository>
+      <id>betonquest-repo</id>
+      <url>https://repo.betonquest.org/betonquest/</url>
+    </repository>
+    <repository>
+      <id>betonquest-papermc-repo</id>
+      <url>https://repo.papermc.io/repository/maven-public/</url>
+    </repository>
+    <repository>
+      <id>betonquest-enginehub-repo</id>
+      <url>https://maven.enginehub.org/repo/</url>
+    </repository>
+    <repository>
+      <id>betonquest-citizensnpcs-repo</id>
+      <url>https://maven.citizensnpcs.co/repo</url>
+    </repository>
+    <repository>
+      <id>betonquest-githubusercontent-shopkeepers-repo</id>
+      <url>https://raw.githubusercontent.com/Shopkeepers/Repository/main/releases/</url>
+    </repository>
+  </repositories>
+
+  <dependencies>
+    <!-- from papermc repository -->
+    <dependency>
+      <groupId>io.papermc.paper</groupId>
+      <artifactId>paper-api</artifactId>
+      <version>1.21.11-R0.1-SNAPSHOT</version>
+      <scope>provided</scope>
+      <exclusions>
+        <exclusion>
+          <groupId>junit</groupId>
+          <artifactId>junit</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>org.apache.commons</groupId>
+          <artifactId>commons-lang3</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>com.google.code.gson</groupId>
+          <artifactId>gson</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+
+    <!-- BetonQuest -->
+    <dependency>
+      <groupId>org.betonquest.betonquest</groupId>
+      <artifactId>api</artifactId>
+      <version>${betonquest-api.version}</version>
+      <scope>provided</scope>
+    </dependency>
+
+    <!-- from enginehub repository -->
+    <dependency>
+      <groupId>com.sk89q.worldguard</groupId>
+      <artifactId>worldguard-bukkit</artifactId>
+      <version>${worldguard-bukkit.version}</version>
+      <scope>provided</scope>
+      <optional>true</optional>
+      <exclusions>
+        <exclusion>
+          <groupId>org.spigotmc</groupId>
+          <artifactId>spigot-api</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>com.sk89q.worldguard</groupId>
+      <artifactId>worldguard-core</artifactId>
+      <version>${worldguard-core.version}</version>
+      <scope>provided</scope>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>com.sk89q.worldedit</groupId>
+      <artifactId>worldedit-bukkit</artifactId>
+      <version>${worldedit-bukkit.version}</version>
+      <scope>provided</scope>
+      <optional>true</optional>
+      <exclusions>
+        <exclusion>
+          <groupId>org.spigotmc</groupId>
+          <artifactId>spigot-api</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>com.sk89q.worldedit</groupId>
+      <artifactId>worldedit-core</artifactId>
+      <version>${worldedit-core.version}</version>
+      <scope>provided</scope>
+      <optional>true</optional>
+      <exclusions>
+        <exclusion>
+          <groupId>org.enginehub.lin-bus</groupId>
+          <artifactId>lin-bus-bom</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+
+    <!-- from githubusercontent-Shopkeepers repository -->
+    <dependency>
+      <groupId>com.nisovin.shopkeepers</groupId>
+      <artifactId>ShopkeepersAPI</artifactId>
+      <version>${shopkeepers-api.version}</version>
+      <scope>provided</scope>
+      <optional>true</optional>
+    </dependency>
+
+    <!-- from citizensnpcs repository -->
+    <dependency>
+      <groupId>net.citizensnpcs</groupId>
+      <artifactId>citizens-main</artifactId>
+      <version>${citizens-main.version}</version>
+      <scope>provided</scope>
+      <optional>true</optional>
+      <exclusions>
+        <exclusion>
+          <groupId>junit</groupId>
+          <artifactId>junit</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+  </dependencies>
+
+</project>
