@@ -11,7 +11,7 @@
   </parent>
 
   <groupId>de.juyas</groupId>
-  <artifactId>courier</artifactId>
+  <artifactId>courier-plugin</artifactId>
   <version>${revision}${changelist}</version>
   <description>A minecraft plugin to create letters in maps and deliver them to players</description>
 
